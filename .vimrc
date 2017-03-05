@@ -94,8 +94,11 @@ autocmd ColorScheme,BufEnter * silent! call HighLight('TrailingWS', '\s\+$', 'Da
 autocmd FileType cpp setlocal foldmethod=syntax matchpairs+=<:> shiftwidth=4 tabstop=4 expandtab
 autocmd FileType cpp setlocal commentstring=//%s
 
+autocmd FileType c setlocal foldmethod=syntax shiftwidth=4 tabstop=4 expandtab
+autocmd FileType c setlocal commentstring=//%s
+
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType python setlocal commentstring=//#
+autocmd FileType python setlocal commentstring=#%s
 
 autocmd FileType xml setlocal foldmethod=syntax shiftwidth=4 tabstop=4
 
