@@ -50,6 +50,7 @@ map <silent> <leader>h :nohlsearch<cr>
 map <silent> <leader>j <leader><leader>j
 map <silent> <leader>k <leader><leader>k
 map <silent> <leader>n :execute 'NERDTreeToggle ' . (filereadable(expand('%')) ? expand('%') : '')<cr>
+map <silent> <leader>p :diffput<cr>
 map <silent> <leader>t :Tlist<cr>
 map <silent> <leader>w <c-w>
 map <silent> z- zb15<c-e>
