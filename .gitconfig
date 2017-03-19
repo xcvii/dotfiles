@@ -1,0 +1,10 @@
+[alias]
+	st = status
+	br = branch
+	co = checkout
+	rb = rebase
+[user]
+	email = sajobandi@gmail.com
+	name = Endre Tamas SAJO
+[pull]
+	rebase = true
