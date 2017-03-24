@@ -236,12 +236,11 @@ command! -register CopyMatches call CopyMatches(<q-reg>)
 
 
 function! CallWithQArgs(function, args)
-" surely there's a vimscript way?
 python << endpython
 import vim
 import shlex
-args = vim.eval('a:args')
 function = vim.eval('a:function')
+args = vim.eval('a:args')
 vim.command("call %s('%s')" % (function, "', '".join(shlex.split(args))))
 endpython
 endfunction
