@@ -71,6 +71,7 @@ noremap zL zl
 noremap zh zH
 noremap zH zh
 
+" set commands
 nmap <silent> <leader>sl :set list! list?<cr>
 nmap <silent> <leader>sp :set paste! paste?<cr>
 nmap <silent> <leader>sw :set wrap! wrap?<cr>
@@ -80,6 +81,11 @@ nmap <silent> <leader>sm :set modifiable! modifiable?<cr>
 nmap <silent> <leader>sn :set number! number?<cr>
 nmap <silent> <leader>se :set expandtab! expandtab?<cr>
 nmap <silent> <leader>sy :execute exists('g:syntax_on') ? ':syntax off' : ':syntax on'<cr>
+
+" format commands
+nmap <silent> <leader>fc :%!c++filt<cr>
+vmap <silent> <leader>fc :'<,'>!c++filt<cr>
+nmap <silent> <leader>fh :Toggle ':%!xxd' ':%!xxd -r' 'xxd'<cr>
 
 " }}}
 
@@ -228,6 +234,32 @@ function! CopyMatches(reg)
     let &modifiable = l:modifiable
 endfunction
 command! -register CopyMatches call CopyMatches(<q-reg>)
+
+
+function! CallWithQArgs(function, args)
+" surely there's a vimscript way?
+python << endpython
+import vim
+import shlex
+args = vim.eval('a:args')
+function = vim.eval('a:function')
+vim.command("call %s('%s')" % (function, "', '".join(shlex.split(args))))
+endpython
+endfunction
+
+
+function! Toggle(set_cmd, unset_cmd, guard)
+    let l:guard_name = 'b:toggleguard_' . a:guard
+    if exists(l:guard_name) && eval(l:guard_name)
+        execute 'unlet ' . l:guard_name
+        execute a:unset_cmd
+    else
+        execute 'let ' . l:guard_name . ' = 1'
+        execute a:set_cmd
+    endif
+endfunction
+command! -nargs=* Toggle call CallWithQArgs('Toggle', <q-args>)
+
 
 " }}}
 
