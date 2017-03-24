@@ -45,7 +45,6 @@ map <silent> <leader>' :checktime<cr>
 map <silent> <leader>, :set buftype=nofile noreadonly modifiable <bar> :execute 'file ' . expand('%') . ' [Scratch]'<cr>
 map <silent> <leader>C :CopyMatches<cr>
 map <silent> <leader>b :execute (IsBufferDirty() ? ':BufExplorerVerticalSplit' : ':BufExplorer')<cr>
-map <silent> <leader>c <Plug>NERDCommenterToggle
 map <silent> <leader>h :nohlsearch<cr>
 map <silent> <leader>j <leader><leader>j
 map <silent> <leader>k <leader><leader>k
