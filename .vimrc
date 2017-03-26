@@ -84,7 +84,7 @@ nmap <silent> <leader>sy :execute exists('g:syntax_on') ? ':syntax off' : ':synt
 " format commands
 nmap <silent> <leader>fc :%!c++filt<cr>
 vmap <silent> <leader>fc :'<,'>!c++filt<cr>
-nmap <silent> <leader>fh :Toggle ':%!xxd' ':%!xxd -r' 'xxd'<cr>
+nmap <silent> <leader>fh :ToggleHexdump<cr>
 
 " }}}
 
@@ -257,6 +257,17 @@ function! Toggle(set_cmd, unset_cmd, guard)
     endif
 endfunction
 command! -nargs=* Toggle call CallWithQArgs('Toggle', <q-args>)
+
+
+function! ToggleHexdump()
+    let l:is_binary = empty(matchstr(getline(1), '^00000000: '))
+    if l:is_binary
+        execute ':%!xxd'
+    else
+        execute ':%!xxd -r'
+    endif
+endfunction
+command! ToggleHexdump call ToggleHexdump()
 
 
 " }}}
