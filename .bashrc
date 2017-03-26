@@ -4,12 +4,12 @@ fi
 
 
 wineinstall() {
-    filepath="$1"
+    filepath="${1?}"
 
     basename=$(basename "$filepath")
 
-    wineprefix="$HOME/.wine/$basename"
+    wineprefix="${HOME?}/.wine/$basename"
 
-    env WINEPREFIX="$wineprefix" wine $filepath
+    env WINEPREFIX="$wineprefix" wine "$filepath"
 }
 
