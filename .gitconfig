@@ -8,3 +8,5 @@
 	name = Endre Tamas SAJO
 [pull]
 	rebase = true
+[core]
+	excludesfile = /home/xcvii/.gitignore
