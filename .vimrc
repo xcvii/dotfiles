@@ -215,7 +215,7 @@ endfunction
 
 
 function! IsBufferDirty()
-    return !empty(expand('%')) || line('$') != 1 || getline != ''
+    return !empty(expand('%')) || line('$') != 1 || getline('.') != ''
 endfunction
 
 
