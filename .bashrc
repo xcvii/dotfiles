@@ -3,6 +3,10 @@ if [[ $- != *i* ]] ; then
 fi
 
 
+# scale touchpad sensitivity in sdl when low-res fullscreen
+export SDL_MOUSE_RELATIVE=0
+
+
 wineinstall() {
     filepath="${1?}"
 
