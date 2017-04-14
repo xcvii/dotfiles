@@ -161,6 +161,7 @@ Plugin 'tpope/vim-fugitive'
     map <silent> <leader>gb :Gblame<cr>
     map <silent> <leader>gc :Gcommit<cr>
     map <silent> <leader>gd :Gdiff<cr>
+    map <silent> <leader>ge :Gedit<cr>
     map <silent> <leader>gs :Gstatus<cr>
     map <silent> <leader>gw :Gwrite<cr>
 
