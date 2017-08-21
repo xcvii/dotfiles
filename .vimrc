@@ -143,6 +143,11 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/NERDTree'
     let g:NERDTreeWinSize = 50
 
+    function NERDTreeMyOpenFile(node)
+        call a:node.activate({ 'reuse': 'currenttab', 'where': 'p' })
+    endfunction
+    autocmd VimEnter * :call NERDTreeAddKeyMap({ 'key': 'o', 'callback': 'NERDTreeMyOpenFile', 'scope': 'FileNode', 'override': 1 })
+
 Plugin 'taglist.vim'
     let g:Tlist_WinWidth = 50
     let g:Tlist_Show_One_File = 1
