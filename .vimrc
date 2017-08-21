@@ -116,10 +116,10 @@ autocmd FileType xml setlocal foldmethod=syntax shiftwidth=4 tabstop=4
 """"""""""
 " {{{1
 
-set runtimepath+=~/.vim/bundle/vundle
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'brookhong/cscope.vim'
