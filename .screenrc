@@ -1,3 +1,5 @@
 escape ^Oo
 scrollback 200000
+caption always
+maptimeout 5
 
