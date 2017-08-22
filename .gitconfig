@@ -1,12 +1,14 @@
 [alias]
-	st = status
-	br = branch
-	co = checkout
-	rb = rebase
+    st = status
+    br = branch
+    co = checkout
+    rb = rebase
 [user]
-	email = sajobandi@gmail.com
-	name = Endre Tamas SAJO
+    email = sajobandi@gmail.com
+    name = Endre Tamas SAJO
 [pull]
-	rebase = true
+    rebase = true
 [core]
-	excludesfile = /home/xcvii/.gitignore
+    excludesfile = /home/xcvii/.gitignore
+    whitespace = -blank-at-eof
+
