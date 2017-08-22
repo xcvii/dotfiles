@@ -3,3 +3,7 @@ scrollback 200000
 caption always
 maptimeout 5
 
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
