@@ -9,6 +9,9 @@
 [pull]
     rebase = true
 [core]
+    editor = vim
     excludesfile = /home/xcvii/.gitignore
     whitespace = -blank-at-eof
+[merge]
+    ff = only
 
