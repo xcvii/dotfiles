@@ -5,6 +5,8 @@ maptimeout 5
 
 bind ^h
 
+bind V split -v
+
 bind h focus left
 bind j focus down
 bind k focus up
