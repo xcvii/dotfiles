@@ -108,6 +108,8 @@ autocmd FileType python setlocal commentstring=#%s
 
 autocmd FileType xml setlocal foldmethod=syntax shiftwidth=4 tabstop=4
 
+autocmd FileType json setlocal foldmethod=syntax
+
 " }}}
 
 
@@ -143,7 +145,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/NERDTree'
     let g:NERDTreeWinSize = 50
 
-    function NERDTreeMyOpenFile(node)
+    function! NERDTreeMyOpenFile(node)
         call a:node.activate({ 'reuse': 'currenttab', 'where': 'p' })
     endfunction
     autocmd VimEnter * :call NERDTreeAddKeyMap({ 'key': 'o', 'callback': 'NERDTreeMyOpenFile', 'scope': 'FileNode', 'override': 1 })
