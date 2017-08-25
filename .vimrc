@@ -11,7 +11,7 @@ set cursorline
 set ignorecase smartcase incsearch hlsearch
 set gdefault
 set nostartofline
-set synmaxcol=300
+set synmaxcol=500
 set nocompatible
 set isfname=@,48-57,/,.,-,_,+,,,#,$,%,~
 set iskeyword=@,48-57,_,192-255
