@@ -123,6 +123,7 @@ call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'brookhong/cscope.vim'
 Plugin 'kevinw/pyflakes-vim'
