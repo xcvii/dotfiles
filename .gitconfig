@@ -3,6 +3,7 @@
     br = branch
     co = checkout
     rb = rebase
+    su = submodule update --recursive
 [user]
     email = sajobandi@gmail.com
     name = Endre Tamas SAJO
