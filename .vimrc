@@ -86,6 +86,9 @@ nmap <silent> <leader>fc :%!c++filt<cr>
 vmap <silent> <leader>fc :'<,'>!c++filt<cr>
 nmap <silent> <leader>fh :ToggleHexdump<cr>
 
+" column formatting
+nmap <silent> <leader>c, :%s/,\zs\ze,/ /e<cr>:%column -ts,<cr>
+
 " }}}
 
 
