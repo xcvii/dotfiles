@@ -2,6 +2,7 @@
     st = status
     br = branch
     co = checkout
+    cp = cherry-pick
     rb = rebase
     su = submodule update --recursive
 [user]
