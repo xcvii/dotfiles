@@ -22,6 +22,7 @@ set autoread
 set whichwrap=""
 set fillchars="vert:|,fold: "
 set diffopt=filler,iwhite,vertical
+set dir=$HOME/.local/tmp/
 
 let g:xml_syntax_folding = 1
 
