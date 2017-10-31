@@ -76,7 +76,7 @@ nmap <silent> <leader>sl :set list! list?<cr>
 nmap <silent> <leader>sp :set paste! paste?<cr>
 nmap <silent> <leader>sw :set wrap! wrap?<cr>
 nmap <silent> <leader>ss :let &g:laststatus = 3 - &g:laststatus <bar> set laststatus?<cr>
-nmap <silent> <leader>sd :set diff! <bar> let &scrollbind=&diff <bar> let &cursorbind=&diff <bar> set diff? scrollbind? cursorbind?<cr>
+nmap <silent> <leader>sd :call Toggle(':diffthis', ':diffoff', 'diff')<cr>
 nmap <silent> <leader>sm :set modifiable! modifiable?<cr>
 nmap <silent> <leader>sn :set number! number?<cr>
 nmap <silent> <leader>se :set expandtab! expandtab?<cr>
