@@ -66,6 +66,9 @@ map <f2> :tabnew<cr>
 map <f3> gT
 map <f4> gt
 
+cmap <c-p> <up>
+cmap <c-n> <down>
+
 noremap zl zL
 noremap zL zl
 noremap zh zH
