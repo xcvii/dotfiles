@@ -112,7 +112,7 @@ autocmd FileType c setlocal commentstring=//%s
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType python setlocal commentstring=#%s
-autocmd FileType python setlocal indentkeys-=:
+autocmd FileType python setlocal indentkeys-=:,<:>
 
 autocmd FileType xml setlocal foldmethod=syntax shiftwidth=4 tabstop=4
 
