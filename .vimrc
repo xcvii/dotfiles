@@ -87,8 +87,10 @@ nmap <silent> <leader>se :set expandtab! expandtab?<cr>
 nmap <silent> <leader>sy :execute exists('g:syntax_on') ? ':syntax off' : ':syntax on'<cr>
 
 " format commands
-nmap <silent> <leader>fc :%!c++filt<cr>
-vmap <silent> <leader>fc :'<,'>!c++filt<cr>
+nmap <silent> <leader>ff :%!c++filt<cr>
+vmap <silent> <leader>ff :!c++filt<cr>
+nmap <silent> <leader>fc :%!clang-format<cr>
+vmap <silent> <leader>fc :!clang-format<cr>
 nmap <silent> <leader>fh :ToggleHexdump<cr>
 
 " column formatting
