@@ -89,7 +89,7 @@ nmap <silent> <leader>sy :execute exists('g:syntax_on') ? ':syntax off' : ':synt
 " format commands
 nmap <silent> <leader>ff :%!c++filt<cr>
 vmap <silent> <leader>ff :!c++filt<cr>
-nmap <silent> <leader>fc :%!clang-format<cr>
+nmap <silent> <leader>fc mt:%!clang-format<cr>`tzz
 vmap <silent> <leader>fc :!clang-format<cr>
 nmap <silent> <leader>fh :ToggleHexdump<cr>
 
